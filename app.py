@@ -60,17 +60,22 @@ def handle_postback(event):
         line_bot_api.reply_message(event.reply_token, messages)
     elif postback_data.get('action')=='查詢藍莓':
         messages=[]
-        messages.append(TextSendMessage(text='藍莓 每100克\n熱量:57千卡\n糖:10.0克\n維生素C:9.7毫克\n膳食纖維2.4毫克\n'))
+        messages.append(TextSendMessage(text='藍莓 每100克\n熱量:57千卡\n糖:10.0克\n維生素C:9.7毫克\n膳食纖維2.4毫克'))
         line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢西瓜':
+        messages=[]
+        messages.append(TextSendMessage(text='西瓜 每100克\n熱量:30千卡\n糖:6.2克\n維生素C:8.1毫克\n膳食纖維0.4毫克\nβ-胡蘿蔔素:303微克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢哈密瓜':
+        messages=[]
+        messages.append(TextSendMessage(text='哈密瓜 每100克\n熱量:34千卡\n糖:7.9克\n維生素C:36.7毫克\n膳食纖維0.9毫克\n鉀質:267微克\nβ-胡蘿蔔素:2020微克'))
+        line_bot_api.reply_message(event.reply_token, messages)    
 
 @handler.add(MessageEvent)
 def handle_something(event):
     if event.message.type=='text':
         recrive_text=event.message.text
         if '水果資訊查詢' in recrive_text:
-            messages=[]
-            messages.append(TextSendMessage(text='正在為你導入查詢頁面'))
-            line_bot_api.reply_message(event.reply_token, messages)
             fruit_serch(event)
         elif '今日推薦水果' in recrive_text:
             fruit_box=['草莓','奇異果','藍莓']
