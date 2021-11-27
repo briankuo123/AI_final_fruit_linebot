@@ -68,6 +68,9 @@ def handle_something(event):
     if event.message.type=='text':
         recrive_text=event.message.text
         if '水果資訊查詢' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='正在為你導入查詢頁面'))
+            line_bot_api.reply_message(event.reply_token, messages)
             fruit_serch(event)
         elif '今日推薦水果' in recrive_text:
             fruit_box=['草莓','奇異果','藍莓']
