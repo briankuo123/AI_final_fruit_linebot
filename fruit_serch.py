@@ -8,7 +8,7 @@ def fruit_serch(event):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='fruit1.jpg',
+                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
                     title='漿果類',
                     text='請選擇要查詢的水果',
                     actions=[
