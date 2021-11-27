@@ -8,24 +8,24 @@ def fruit_serch(event):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-                    title='毛巾類',
-                    text='請問想索取哪一種備品',
+                    thumbnail_image_url='fruit1.jpg',
+                    title='漿果類',
+                    text='請選擇要查詢的水果',
                     actions=[
                         PostbackAction(
-                            label='毛巾',
-                            display_text='想索取毛巾',
-                            data='action=索取備品&item=毛巾'
+                            label='草莓',
+                            display_text='查詢草莓',
+                            data='action=查詢草莓&item=1'
                         ),
                         PostbackAction(
-                            label='浴巾',
-                            display_text='想索取浴巾',
-                            data='action=索取備品&item=浴巾'
+                            label='奇異果',
+                            display_text='查詢奇異果',
+                            data='action=查詢奇異果&item=2'
                         ),
                         PostbackAction(
-                            label='方巾',
-                            display_text='想索取方巾',
-                            data='action=索取備品&item=方巾'
+                            label='藍莓',
+                            display_text='查詢藍莓',
+                            data='action=查詢藍莓&item=3'
                         )
                     ]
                 ),
