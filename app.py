@@ -72,7 +72,7 @@ def handle_something(event):
         elif '今日推薦水果' in recrive_text:
             fruit_box=['草莓','奇異果','藍莓']
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦 {}'.format(fruit_box(random.randint(0,2)))))
+            messages.append(TextSendMessage(text='為你推薦 {}'.format(fruit_box[random.randint(0,2)])))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
