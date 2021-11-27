@@ -4,7 +4,7 @@ from linebot_import_api import *
 
 def fruit_serch(event):
     message = TemplateSendMessage(
-        alt_text='Buttons template',
+        alt_text='serch template',
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
@@ -35,110 +35,17 @@ def fruit_serch(event):
                     text='想要查詢哪個水果?',
                     actions=[
                         PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
+                            label='西瓜',
+                            display_text='查詢西瓜',
+                            data='action=查詢西瓜'
                         ),
                         PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
+                            label='哈密瓜',
+                            display_text='查詢哈密瓜',
+                            data='action=查詢哈密瓜'
                         )
                     ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='fruit3.jpg',
-                    title='柑橘類',
-                    text='想要查詢哪個水果?',
-                    actions=[
-                        PostbackAction(
-                            label='礦泉水',
-                            display_text='想索取礦泉水',
-                            data='action=索取備品&item=礦泉水'
-                        ),
-                        PostbackAction(
-                            label='3合1沖泡咖啡包',
-                            display_text='想索取3合1沖泡咖啡包',
-                            data='action=索取備品&item=3合1沖泡咖啡包'
-                        ),
-                        PostbackAction(
-                            label='紅茶茶包',
-                            display_text='想索取紅茶茶包',
-                            data='action=索取備品&item=紅茶茶包'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='fruit4.jpg',
-                    title='梨果類',
-                    text='想要查詢哪個水果?',
-                    actions=[
-                        PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
-                        ),
-                        PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='fruit5.jpg',
-                    title='核果類',
-                    text='想要查詢哪個水果?',
-                    actions=[
-                        PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
-                        ),
-                        PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='fruit6.jpg',
-                    title='熱帶水果',
-                    text='想要查詢哪個水果?',
-                    actions=[
-                        PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
-                        ),
-                        PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
-                        )
-                    ]
-                )
+                )    
             ]
         )
     )
