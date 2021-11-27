@@ -15,17 +15,17 @@ def fruit_serch(event):
                         PostbackAction(
                             label='草莓',
                             display_text='查詢草莓',
-                            data='action=查詢草莓'
+                            data='action=查詢草莓&item=草莓'
                         ),
                         PostbackAction(
                             label='奇異果',
                             display_text='查詢奇異果',
-                            data='action=查詢奇異果'
+                            data='action=查詢奇異果&item=奇異果'
                         ),
                         PostbackAction(
                             label='藍莓',
                             display_text='查詢藍莓',
-                            data='action=查詢藍莓'
+                            data='action=查詢藍莓&item=藍莓'
                         )
                     ]
                 ),
@@ -37,12 +37,12 @@ def fruit_serch(event):
                         PostbackAction(
                             label='西瓜',
                             display_text='查詢西瓜',
-                            data='action=查詢西瓜'
+                            data='action=查詢西瓜&item=西瓜'
                         ),
                         PostbackAction(
                             label='哈密瓜',
                             display_text='查詢哈密瓜',
-                            data='action=查詢哈密瓜'
+                            data='action=查詢哈密瓜&item=哈密瓜'
                         )
                     ]
                 )
