@@ -31,45 +31,40 @@ def fruit_serch(event):
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-                    title='清潔用品',
+                    title='瓜果類',
                     text='請選擇想查詢的水果',
                     actions=[
                         PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
+                            label='西瓜',
+                            display_text='查詢西瓜',
+                            data='action=查詢西瓜'
                         ),
                         PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
+                            label='哈密瓜',
+                            display_text='查詢哈密瓜',
+                            data='action=查詢哈密瓜'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-                    title='其他備品',
+                    title='柑橘類',
                     text='請選擇想查詢的水果',
                     actions=[
                         PostbackAction(
-                            label='礦泉水',
-                            display_text='想索取礦泉水',
-                            data='action=索取備品&item=礦泉水'
+                            label='柳丁',
+                            display_text='查詢柳丁',
+                            data='action=查詢柳丁'
                         ),
                         PostbackAction(
-                            label='3合1沖泡咖啡包',
-                            display_text='想索取3合1沖泡咖啡包',
-                            data='action=索取備品&item=3合1沖泡咖啡包'
+                            label='檸檬',
+                            display_text='查詢檸檬',
+                            data='action=查詢檸檬'
                         ),
                         PostbackAction(
-                            label='紅茶茶包',
-                            display_text='想索取紅茶茶包',
-                            data='action=索取備品&item=紅茶茶包'
+                            label='柚子',
+                            display_text='查詢柚子',
+                            data='action=查詢柚子'
                         )
                     ]
                 )

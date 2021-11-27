@@ -70,6 +70,18 @@ def handle_postback(event):
         messages=[]
         messages.append(TextSendMessage(text='哈密瓜 每100克\n熱量:34千卡\n糖:7.9克\n維生素C:36.7毫克\n膳食纖維0.9毫克\n鉀質:267微克\nβ-胡蘿蔔素:2020微克'))
         line_bot_api.reply_message(event.reply_token, messages)    
+    elif postback_data.get('action')=='查詢柳丁':
+        messages=[]
+        messages.append(TextSendMessage(text='柳丁 每100克\n熱量:47千卡\n糖:9.4克\n維生素C:53.2毫克\n膳食纖維2.4毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢檸檬':
+        messages=[]
+        messages.append(TextSendMessage(text='柳丁 每100克\n熱量:29千卡\n糖:2.5克\n維生素C:53.0毫克\n膳食纖維2.8毫克\n鐵質:0.6毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢柚子':
+        messages=[]
+        messages.append(TextSendMessage(text='柚子 每100克\n熱量:40千卡\n糖:7.2克\n維生素C:59.0毫克\n膳食纖維1.3毫克\n鉀質:200毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)    
 
 @handler.add(MessageEvent)
 def handle_something(event):
