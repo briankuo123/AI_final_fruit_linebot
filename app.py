@@ -69,7 +69,11 @@ def handle_postback(event):
     elif postback_data.get('action')=='查詢哈密瓜':
         messages=[]
         messages.append(TextSendMessage(text='哈密瓜 每100克\n熱量:34千卡\n糖:7.9克\n維生素C:36.7毫克\n膳食纖維0.9毫克\n鉀質:267微克\nβ-胡蘿蔔素:2020微克'))
-        line_bot_api.reply_message(event.reply_token, messages)    
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢木瓜':
+        messages=[]
+        messages.append(TextSendMessage(text='木瓜 每100克\n熱量:38千卡\n糖:6.2克\n維生素C:58.3毫克\n膳食纖維1.4毫克\n鉀質:186微克\nβ-胡蘿蔔素:399微克'))
+        line_bot_api.reply_message(event.reply_token, messages)      
     elif postback_data.get('action')=='查詢柳丁':
         messages=[]
         messages.append(TextSendMessage(text='柳丁 每100克\n熱量:47千卡\n糖:9.4克\n維生素C:53.2毫克\n膳食纖維2.4毫克'))

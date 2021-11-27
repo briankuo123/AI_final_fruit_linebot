@@ -45,9 +45,9 @@ def fruit_serch(event):
                             data='action=查詢哈密瓜'
                         ),
                         PostbackAction(
-                            label='瓜瓜',
-                            display_text='查詢瓜瓜',
-                            data='action=查詢瓜瓜'
+                            label='木瓜',
+                            display_text='查詢木瓜',
+                            data='action=查詢木瓜'
                         )
                     ]
                 ),
