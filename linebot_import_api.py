@@ -25,5 +25,5 @@ from linebot.models import (
     ConfirmTemplate
 )
 
-line_bot_api = LineBotApi('f2V3d+/3MpYXb28+tUNODK+t4V+0ak9oe7GjE9KoI4Rl0cKGLbRG8tB/POdwy43kzn+7dxdYqW5RteF/cp7DobS3VW+qxAmriKoqkG2CfFje/7H+2UPQ3IMJ5uOGtkdKcsP3W2e3VMwgrCa5GNUAhwdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('4134a0a296fcd96427f616f80eff50af')
+line_bot_api = LineBotApi('wf2GCBCfr20oOCC3zRI8nO//OQ+7O70dsX4oQyDd6OqKvVsPrpNUB7Nr9Am9CYFV0rY8wkFHNGLLn/E2Wjxmb96Kz64m1Gw9gHqpaxOWy75M8GkkWhhiNRWZQpOkbbFeXZiPwq1iNa7VStzalu8AeAdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('65145590941570829a40b1fbfc5ff527')
