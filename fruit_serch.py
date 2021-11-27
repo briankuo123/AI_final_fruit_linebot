@@ -4,48 +4,75 @@ from linebot_import_api import *
 
 def fruit_serch(event):
     message = TemplateSendMessage(
-        alt_text='serch template',
+        alt_text='索取備品',
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='fruit1.jpg',
-                    title='漿果類',
-                    text='想要查詢哪個水果?',
+                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    title='毛巾類',
+                    text='請問想索取哪一種備品',
                     actions=[
                         PostbackAction(
-                            label='草莓',
-                            display_text='查詢草莓',
-                            data='action=查詢草莓'
+                            label='毛巾',
+                            display_text='想索取毛巾',
+                            data='action=索取備品&item=毛巾'
                         ),
                         PostbackAction(
-                            label='奇異果',
-                            display_text='查詢奇異果',
-                            data='action=查詢奇異果'
+                            label='浴巾',
+                            display_text='想索取浴巾',
+                            data='action=索取備品&item=浴巾'
                         ),
                         PostbackAction(
-                            label='藍莓',
-                            display_text='查詢藍莓',
-                            data='action=查詢藍莓'
+                            label='方巾',
+                            display_text='想索取方巾',
+                            data='action=索取備品&item=方巾'
                         )
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='fruit2.jpg',
-                    title='瓜果類',
-                    text='想要查詢哪個水果?',
+                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    title='清潔用品',
+                    text='請問想索取哪一種請潔用品',
                     actions=[
                         PostbackAction(
-                            label='西瓜',
-                            display_text='查詢西瓜',
-                            data='action=查詢西瓜'
+                            label='沐浴乳',
+                            display_text='想索取沐浴乳',
+                            data='action=索取備品&item=沐浴乳'
                         ),
                         PostbackAction(
-                            label='哈密瓜',
-                            display_text='查詢哈密瓜',
-                            data='action=查詢哈密瓜'
+                            label='洗髮精',
+                            display_text='想索取洗髮精',
+                            data='action=索取備品&item=洗髮精'
+                        ),
+                        PostbackAction(
+                            label='乳液',
+                            display_text='想索取乳液',
+                            data='action=索取備品&item=乳液'
                         )
                     ]
-                )    
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    title='其他備品',
+                    text='請問想索取哪一種備品',
+                    actions=[
+                        PostbackAction(
+                            label='礦泉水',
+                            display_text='想索取礦泉水',
+                            data='action=索取備品&item=礦泉水'
+                        ),
+                        PostbackAction(
+                            label='3合1沖泡咖啡包',
+                            display_text='想索取3合1沖泡咖啡包',
+                            data='action=索取備品&item=3合1沖泡咖啡包'
+                        ),
+                        PostbackAction(
+                            label='紅茶茶包',
+                            display_text='想索取紅茶茶包',
+                            data='action=索取備品&item=紅茶茶包'
+                        )
+                    ]
+                )
             ]
         )
     )
