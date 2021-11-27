@@ -30,7 +30,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    thumbnail_image_url='https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004880/img/basic/a0004880_main.jpg?20210419173506&q=80&rw=750&rh=536',
                     title='瓜果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -52,7 +52,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    thumbnail_image_url='https://s.newtalk.tw/album/album/1/5dc53aef9b943.jpg',
                     title='柑橘類',
                     text='請選擇想查詢的水果',
                     actions=[
