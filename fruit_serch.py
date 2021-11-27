@@ -8,68 +8,41 @@ def fruit_serch(event):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+                    thumbnail_image_url='https://image.photocnc.com/aoaodcom/2019-12/02/201912020821142d3d4289efc52d7c211dab77593e4c69.jpg.h700.webp',
                     title='漿果類',
                     text='請選擇要查詢的水果',
                     actions=[
                         PostbackAction(
                             label='草莓',
                             display_text='查詢草莓',
-                            data='action=查詢草莓&item=1'
+                            data='action=查詢草莓'
                         ),
                         PostbackAction(
                             label='奇異果',
                             display_text='查詢奇異果',
-                            data='action=查詢奇異果&item=2'
+                            data='action=查詢奇異果'
                         ),
                         PostbackAction(
                             label='藍莓',
                             display_text='查詢藍莓',
-                            data='action=查詢藍莓&item=3'
+                            data='action=查詢藍莓'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-                    title='清潔用品',
-                    text='請問想索取哪一種請潔用品',
+                    title='瓜果類',
+                    text='請選擇要查詢的水果',
                     actions=[
                         PostbackAction(
-                            label='沐浴乳',
-                            display_text='想索取沐浴乳',
-                            data='action=索取備品&item=沐浴乳'
+                            label='西瓜',
+                            display_text='查詢西瓜',
+                            data='action=查詢西瓜'
                         ),
                         PostbackAction(
-                            label='洗髮精',
-                            display_text='想索取洗髮精',
-                            data='action=索取備品&item=洗髮精'
-                        ),
-                        PostbackAction(
-                            label='乳液',
-                            display_text='想索取乳液',
-                            data='action=索取備品&item=乳液'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-                    title='其他備品',
-                    text='請問想索取哪一種備品',
-                    actions=[
-                        PostbackAction(
-                            label='礦泉水',
-                            display_text='想索取礦泉水',
-                            data='action=索取備品&item=礦泉水'
-                        ),
-                        PostbackAction(
-                            label='3合1沖泡咖啡包',
-                            display_text='想索取3合1沖泡咖啡包',
-                            data='action=索取備品&item=3合1沖泡咖啡包'
-                        ),
-                        PostbackAction(
-                            label='紅茶茶包',
-                            display_text='想索取紅茶茶包',
-                            data='action=索取備品&item=紅茶茶包'
+                            label='哈密瓜',
+                            display_text='查詢哈密瓜',
+                            data='action=查詢哈密瓜'
                         )
                     ]
                 )
