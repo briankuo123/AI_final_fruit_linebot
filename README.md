@@ -1,0 +1,2 @@
+# AI_final_fruit_linebot
+這個是AI人工智慧導論的期末專案
