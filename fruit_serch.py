@@ -72,7 +72,73 @@ def fruit_serch(event):
                             data='action=查詢柚子'
                         )
                     ]
-                )
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://uc.udn.com.tw/photo/2019/05/21/realtime/6329918.png',
+                    title='梨果類',
+                    text='請選擇想查詢的水果',
+                    actions=[
+                        PostbackAction(
+                            label='蘋果',
+                            display_text='查詢蘋果',
+                            data='action=查詢蘋果'
+                        ),
+                        PostbackAction(
+                            label='楊桃',
+                            display_text='查詢楊桃',
+                            data='action=查詢楊桃'
+                        ),
+                        PostbackAction(
+                            label='梨子',
+                            display_text='查詢梨子',
+                            data='action=查詢梨子'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/07/15/1/13042728.jpg&s=Y&x=64&y=6&sw=1181&sh=787&exp=3600',
+                    title='核果類',
+                    text='請選擇想查詢的水果',
+                    actions=[
+                        PostbackAction(
+                            label='水蜜桃',
+                            display_text='查詢水蜜桃',
+                            data='action=查詢水蜜桃'
+                        ),
+                        PostbackAction(
+                            label='李子',
+                            display_text='查詢李子',
+                            data='action=查詢李子'
+                        ),
+                        PostbackAction(
+                            label='櫻桃',
+                            display_text='查詢櫻桃',
+                            data='action=查詢櫻桃'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://images.chinatimes.com/newsphoto/2021-02-28/656/B01A00_P_01_03.jpg',
+                    title='熱帶水果',
+                    text='請選擇想查詢的水果',
+                    actions=[
+                        PostbackAction(
+                            label='鳳梨',
+                            display_text='查詢鳳梨',
+                            data='action=查詢鳳梨'
+                        ),
+                        PostbackAction(
+                            label='香蕉',
+                            display_text='查詢香蕉',
+                            data='action=查詢香蕉'
+                        ),
+                        PostbackAction(
+                            label='蓮霧',
+                            display_text='查詢蓮霧',
+                            data='action=查詢蓮霧'
+                        )
+                    ]
+                ),
             ]
         )
     )

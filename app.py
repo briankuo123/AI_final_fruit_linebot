@@ -85,7 +85,43 @@ def handle_postback(event):
     elif postback_data.get('action')=='查詢柚子':
         messages=[]
         messages.append(TextSendMessage(text='柚子 每100克\n熱量:40千卡\n糖:7.2克\n維生素C:59.0毫克\n膳食纖維1.3毫克\n鉀質:200毫克'))
-        line_bot_api.reply_message(event.reply_token, messages)    
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢蘋果':
+        messages=[]
+        messages.append(TextSendMessage(text='蘋果 每100克\n熱量:52千卡\n糖:10.4克\n維生素C:4.6毫克\n膳食纖維:2.4毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢楊桃':
+        messages=[]
+        messages.append(TextSendMessage(text='楊桃 每100克\n熱量:31千卡\n糖:4.0克\n維生素C:34.4毫克\n膳食纖維2.8毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢梨子':
+        messages=[]
+        messages.append(TextSendMessage(text='梨子 每100克\n熱量:42千卡\n糖:7.1克\n維生素C:3.8毫克\n膳食纖維3.6毫克\n鉀質:121毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢水蜜桃':
+        messages=[]
+        messages.append(TextSendMessage(text='水蜜桃 每100克\n熱量:39千卡\n糖:8.4克\n維生素C:6.6毫克\n膳食纖維1.5毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢李子':
+        messages=[]
+        messages.append(TextSendMessage(text='李子 每100克\n熱量:46千卡\n糖:9.9克\n維生素C:9.5毫克\n膳食纖維1.4毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢櫻桃':
+        messages=[]
+        messages.append(TextSendMessage(text='櫻桃 每100克\n熱量:63千卡\n糖:12.8克\n維生素C:7.0毫克\n膳食纖維2.1毫克\n鉀質:222毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢鳳梨':
+        messages=[]
+        messages.append(TextSendMessage(text='鳳梨 每100克\n熱量:50千卡\n糖:9.9克\n維生素C:47.8毫克\n膳食纖維1.4毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢香蕉':
+        messages=[]
+        messages.append(TextSendMessage(text='香蕉 每100克\n熱量:89千卡\n糖:12.2克\n維生素C:8.7毫克\n膳食纖維2.6毫克\n鉀質:358毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='查詢蓮霧':
+        messages=[]
+        messages.append(TextSendMessage(text='蓮霧 每100克\n熱量:35千卡\n糖:6.7克\n維生素C:11.0毫克\n膳食纖維1.0毫克'))
+        line_bot_api.reply_message(event.reply_token, messages)                
 
 @handler.add(MessageEvent)
 def handle_something(event):
