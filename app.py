@@ -130,9 +130,9 @@ def handle_something(event):
         if '水果資訊查詢' in recrive_text:
             fruit_serch(event)
         elif '今日推薦水果' in recrive_text:
-            fruit_box=['草莓','奇異果','藍莓']
+            fruit_box=['草莓','奇異果','藍莓','西瓜','哈密瓜','木瓜','柳丁','檸檬','柚子','蘋果','楊桃','梨子','水蜜桃','李子','櫻桃','鳳梨','香蕉','蓮霧']
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦 {}'.format(fruit_box[random.randint(0,2)])))
+            messages.append(TextSendMessage(text='為你推薦 {}'.format(fruit_box[random.randint(0,17)])))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
