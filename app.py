@@ -53,8 +53,6 @@ def handle_postback(event):
     if postback_data.get('action')=='查詢草莓':
         messages=[]
         messages.append(TextSendMessage(text='草莓  每100克\n熱量:32千卡\n糖:4.9克\n維生素C:58.8毫克\n膳食纖維:2.0克'))
-        messages.append(ImageSendMessage(original_content_url='https://blog.liebherr.com/appliances/tw/wp-content/uploads/sites/22/2019/06/strawberries2.jpg', 
-                                        preview_image_url='https://blog.liebherr.com/appliances/tw/wp-content/uploads/sites/22/2019/06/strawberries2.jpg'))
         line_bot_api.reply_message(event.reply_token, messages)
     elif postback_data.get('action')=='查詢奇異果':
         messages=[]
