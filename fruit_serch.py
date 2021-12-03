@@ -8,7 +8,7 @@ def fruit_serch(event):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://image.photocnc.com/aoaodcom/2019-12/02/201912020821142d3d4289efc52d7c211dab77593e4c69.jpg.h700.webp',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit1.jpg?raw=true',
                     title='漿果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -30,7 +30,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004880/img/basic/a0004880_main.jpg?20210419173506&q=80&rw=750&rh=536',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit2.jpg?raw=true',
                     title='瓜果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -52,7 +52,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://s.newtalk.tw/album/album/1/5dc53aef9b943.jpg',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit3.jpg?raw=true',
                     title='柑橘類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -74,7 +74,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://uc.udn.com.tw/photo/2019/05/21/realtime/6329918.png',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit4.jpg?raw=true',
                     title='梨果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -96,7 +96,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/07/15/1/13042728.jpg&s=Y&x=64&y=6&sw=1181&sh=787&exp=3600',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit5.jpg?raw=true',
                     title='核果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -118,7 +118,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://images.chinatimes.com/newsphoto/2021-02-28/656/B01A00_P_01_03.jpg',
+                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit6.jpg?raw=true',
                     title='熱帶水果',
                     text='請選擇想查詢的水果',
                     actions=[
