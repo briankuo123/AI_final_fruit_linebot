@@ -1,9 +1,83 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cover Template · Bootstrap v5.1</title>
 
-{% block title %}
-機器人功能介紹
-{% endblock %}
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
-{% block message %}
-<h1>測試</h1>>
-{% endblock message %}
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0"><b>水果大叔</b></h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="./"><b>首頁</b></a>
+        <a class="nav-link" href="/function"><b>功能</b></a>
+        <a class="nav-link" href="/about"><b>關於我們</b></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <table>
+        <tr>
+          <td>國家</td>
+          <td>首都</td>
+          <td>人口</td>
+          <td>語言</td>
+        </tr>
+        <tr>
+          <td>USA</td>
+          <td>Washington D.C.</td>
+          <td>309 million</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Sweden</td>
+          <td>Stockholm</td>
+          <td>9 million</td>
+          <td>Swedish</td>
+        </tr>
+      </table>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>本網頁屬於<a href="https://www.ncu.edu.tw/tw/index.html" class="text-white">中央大學</a>, by <a href="http://140.115.103.29/" class="text-white">通識教育中心</a>.</p>
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
