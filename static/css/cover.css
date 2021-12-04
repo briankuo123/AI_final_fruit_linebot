@@ -24,6 +24,10 @@ body {
   background-position: center;
 }
 
+table {
+  margin:0 auto;
+}
+
 .cover-container {
   max-width: 42em;
 }
