@@ -26,6 +26,7 @@ body {
 
 table {
   margin:0 auto;
+  border:3;
 }
 
 .cover-container {
