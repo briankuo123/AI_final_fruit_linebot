@@ -19,8 +19,7 @@
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  background-image: url(https://storage.googleapis.com/www-cw-com-tw/article/202107/article-60ddcd064926f.jpg);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) url(https://storage.googleapis.com/www-cw-com-tw/article/202107/article-60ddcd064926f.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -28,7 +27,6 @@ body {
 table {
   margin:0 auto;
   border:3px #000000;
-  color:#000000;
 }
 
 td {
