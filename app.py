@@ -16,7 +16,7 @@ def function():
     return render_template('function.html')
 
 @app.route('/about')
-def function():
+def about():
     return render_template('about.html')
 
 @app.errorhandler(404)
