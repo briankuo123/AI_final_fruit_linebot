@@ -27,6 +27,9 @@ body {
 table {
   margin:0 auto;
   border:3px;
+}
+
+td {
   height:200px;
 }
 
