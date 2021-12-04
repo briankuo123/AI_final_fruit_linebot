@@ -20,7 +20,7 @@ def about():
     return render_template('about.html')
 
 @app.route('/video')
-def function():
+def video():
     return render_template('video.html')
 
 @app.errorhandler(404)
