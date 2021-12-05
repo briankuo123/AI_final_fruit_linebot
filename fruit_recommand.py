@@ -94,6 +94,14 @@ def call_service(event):
                 MessageAction(
                     label='美白',
                     text='我注重幫助美白的水果'
+                ),
+                MessageAction(
+                    label='顧眼睛',
+                    text='我注重顧眼睛的水果'
+                ),
+                MessageAction(
+                    label='助消化',
+                    text='我注重幫助消化的水果'
                 )
             ]
         )
