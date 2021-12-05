@@ -4,6 +4,7 @@ import random
 from linebot.models import events
 from linebot_import_api import *
 from fruit_serch import *
+from fruit_recommand import*
 
 app = Flask(__name__)
 
@@ -154,35 +155,48 @@ def handle_something(event):
         if '水果資訊查詢' in recrive_text:
             fruit_serch(event)
         elif '今日推薦水果' in recrive_text:
-            fruit_box=['草莓','奇異果','藍莓','西瓜','哈密瓜','木瓜','柳丁','檸檬','柚子','蘋果','楊桃','梨子','水蜜桃','李子','櫻桃','鳳梨','香蕉','蓮霧']
-            fruit_box_picture=['https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E8%8D%89%E8%8E%93.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E5%A5%87%E7%95%B0%E6%9E%9C.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E8%97%8D%E8%8E%93.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E8%A5%BF%E7%93%9C.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E5%93%88%E5%AF%86%E7%93%9C.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%9C%A8%E7%93%9C.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%9F%B3%E4%B8%81.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%AA%B8%E6%AA%AC.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%9F%9A%E5%AD%90.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E8%98%8B%E6%9E%9C.png?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%A5%8A%E6%A1%83.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%B0%B4%E6%A2%A8.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%B0%B4%E8%9C%9C%E6%A1%83.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%9D%8E%E5%AD%90.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E6%AB%BB%E6%A1%83.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E9%B3%B3%E6%A2%A8.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E9%A6%99%E8%95%89.jpg?raw=true',
-                                'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/%E6%B0%B4%E6%9E%9C%E5%9C%96%E7%89%87/%E8%93%AE%E9%9C%A7.jpg?raw=true']
-            rand_num=random.randint(0,17)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦 {}'.format(fruit_box[rand_num])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[rand_num],
-                                                preview_image_url=fruit_box_picture[rand_num]))
-            line_bot_api.reply_message(event.reply_token, messages)
+            fruit_recommand(event)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們還未將此功能導入，請改日再試'))
             line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重當季水果' in recrive_text:
+            recommand=sesonal_fruit()
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[recommand])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[recommand],
+                                                preview_image_url=fruit_box_picture[recommand]))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重幫助美白的水果' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_beauty)])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_beauty)],
+                                                preview_image_url=fruit_box_picture[random.choice(fruit_beauty)]))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重顧眼睛的水果' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_eye)])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_eye)],
+                                                preview_image_url=fruit_box_picture[random.choice(fruit_eye)]))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重幫助消化的水果' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_digest)])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_digest)],
+                                                preview_image_url=fruit_box_picture[random.choice(fruit_digest)]))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重幫助減肥的水果' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_diet)])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_diet)],
+                                                preview_image_url=fruit_box_picture[random.choice(fruit_diet)]))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif '我注重幫助消除疲勞的水果的水果' in recrive_text:
+            messages=[]
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_rest)])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_rest)],
+                                                preview_image_url=fruit_box_picture[random.choice(fruit_rest)]))
+            line_bot_api.reply_message(event.reply_token, messages)    
         else:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們無法了解你所輸入的內容，請再輸入一次'))
