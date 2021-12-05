@@ -83,17 +83,17 @@ def call_service(event):
         alt_text='Buttons template',
         template=ButtonsTemplate(
             # thumbnail_image_url=url_for('static', filename='images/brown_1024.jpg', _external=True),
-            thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
-            title='請問需要什麼服務呢?',
-            text='請在下方點選您需要的服務項目',
+            thumbnail_image_url='https://img.ixintu.com/upload/jpg/20210523/d97c1b19cbb8967c78f6d3a759926c8e_46963_800_800.jpg!ys',
+            title='請問你注重下列哪一個項目呢?',
+            text='請在下方點選您注重的項目',
             actions=[
                 MessageAction(
-                    label='索取備品(毛巾、礦泉水...等)',
-                    text='索取備品'
+                    label='當季水果',
+                    text='我注重當季水果'
                 ),
                 MessageAction(
-                    label='客房介紹',
-                    text='客房介紹'
+                    label='美白',
+                    text='我注重幫助美白的水果'
                 )
             ]
         )
