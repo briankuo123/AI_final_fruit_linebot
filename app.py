@@ -155,7 +155,7 @@ def handle_something(event):
         if '水果資訊查詢' in recrive_text:
             fruit_serch(event)
         elif '今日推薦水果' in recrive_text:
-            fruit_recommand(event)
+            call_service(event)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們還未將此功能導入，請改日再試'))
