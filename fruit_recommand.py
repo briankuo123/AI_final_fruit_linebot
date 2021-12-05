@@ -42,42 +42,57 @@ fruit_rest=[1,7,9]
 
 def fruit_recommand(event):
     message = TemplateSendMessage(
-        alt_text='recommand template',
-        template=ButtonsTemplate(
-            # thumbnail_image_url=url_for('static', filename='images/brown_1024.jpg', _external=True),
-            thumbnail_image_url='https://img.ixintu.com/upload/jpg/20210523/d97c1b19cbb8967c78f6d3a759926c8e_46963_800_800.jpg!ys',
-            title='請問你注重下列哪一個項目呢',
-            text='請在下方點選您注重的項目',
-            actions=[
-                MessageAction(
-                    label='當季水果',
-                    text='我注重當季水果'
+        alt_text='搜尋',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    thumbnail_image_url='https://img.ixintu.com/upload/jpg/20210523/d97c1b19cbb8967c78f6d3a759926c8e_46963_800_800.jpg!ys',
+                    title='請問你注重下列哪一個項目呢?',
+                    text='請在下方點選您注重的項目',
+                    actions=[
+                        PostbackAction(
+                            label='當季水果',
+                            display_text='我注重當季水果',
+                            data='action=我注重當季水果'
+                        ),
+                        PostbackAction(
+                            label='美白',
+                            display_text='我注重幫助美白的水果',
+                            data='action=我注重幫助美白的水果'
+                        ),
+                        PostbackAction(
+                            label='顧眼睛',
+                            display_text='我注重顧眼睛的水果',
+                            data='action=我注重顧眼睛的水果'
+                        )
+                    ]
                 ),
-                MessageAction(
-                    label='美白',
-                    text='我注重幫助美白的水果'
-                ),
-                MessageAction(
-                    label='顧眼睛',
-                    text='我注重顧眼睛的水果'
-                ),
-                MessageAction(
-                    label='助消化',
-                    text='我注重幫助消化的水果'
-                ),
-                MessageAction(
-                    label='減肥',
-                    text='我注重幫助減肥的水果'
-                ),
-                MessageAction(
-                    label='消除疲勞',
-                    text='我注重幫助消除疲勞的水果的水果'
+                CarouselColumn(
+                    thumbnail_image_url='https://img.ixintu.com/upload/jpg/20210523/d97c1b19cbb8967c78f6d3a759926c8e_46963_800_800.jpg!ys',
+                    title='請問你注重下列哪一個項目呢?',
+                    text='請在下方點選您注重的項目',
+                    actions=[
+                        PostbackAction(
+                            label='助消化',
+                            display_text='我注重幫助消化的水果',
+                            data='action=我注重幫助消化的水果'
+                        ),
+                        PostbackAction(
+                            label='減肥',
+                            display_text='我注重幫助減肥的水果',
+                            data='action=我注重幫助減肥的水果'
+                        ),
+                        PostbackAction(
+                            label='消除疲勞',
+                            display_text='我注重幫助消除疲勞的水果的水果',
+                            data='action=我注重幫助消除疲勞的水果的水果'
+                        )
+                    ]
                 )
             ]
         )
     )
     line_bot_api.reply_message(event.reply_token, message)
-
 def call_service(event):
     message = TemplateSendMessage(
         alt_text='Buttons template',
