@@ -68,6 +68,32 @@ def fruit_recommand(event):
                 MessageAction(
                     label='減肥',
                     text='我注重幫助減肥的水果'
+                ),
+                MessageAction(
+                    label='消除疲勞',
+                    text='我注重幫助消除疲勞的水果的水果'
+                )
+            ]
+        )
+    )
+    line_bot_api.reply_message(event.reply_token, message)
+
+def call_service(event):
+    message = TemplateSendMessage(
+        alt_text='Buttons template',
+        template=ButtonsTemplate(
+            # thumbnail_image_url=url_for('static', filename='images/brown_1024.jpg', _external=True),
+            thumbnail_image_url='https://i.imgur.com/rfgMcFM.jpg',
+            title='請問需要什麼服務呢?',
+            text='請在下方點選您需要的服務項目',
+            actions=[
+                MessageAction(
+                    label='索取備品(毛巾、礦泉水...等)',
+                    text='索取備品'
+                ),
+                MessageAction(
+                    label='客房介紹',
+                    text='客房介紹'
                 )
             ]
         )
