@@ -168,34 +168,39 @@ def handle_something(event):
                                                 preview_image_url=fruit_box_picture[recommand]))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '我注重幫助美白的水果' in recrive_text:
+            ran=random.choice(fruit_beauty)
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_beauty)])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_beauty)],
-                                                preview_image_url=fruit_box_picture[random.choice(fruit_beauty)]))
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '我注重顧眼睛的水果' in recrive_text:
+            ran=random.choice(fruit_eye)
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_eye)])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_eye)],
-                                                preview_image_url=fruit_box_picture[random.choice(fruit_eye)]))
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '我注重幫助消化的水果' in recrive_text:
+            ran=random.choice(fruit_digest)
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_digest)])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_digest)],
-                                                preview_image_url=fruit_box_picture[random.choice(fruit_digest)]))
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '我注重幫助減肥的水果' in recrive_text:
+            ran=random.choice(fruit_diet)
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_diet)])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_diet)],
-                                                preview_image_url=fruit_box_picture[random.choice(fruit_diet)]))
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)
         elif '我注重幫助消除疲勞的水果的水果' in recrive_text:
+            ran=random.choice(fruit_rest)
             messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[random.choice(fruit_rest)])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[random.choice(fruit_rest)],
-                                                preview_image_url=fruit_box_picture[random.choice(fruit_rest)]))
+            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)    
         else:
             messages=[]
