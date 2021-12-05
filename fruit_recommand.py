@@ -68,10 +68,6 @@ def fruit_recommand(event):
                 MessageAction(
                     label='減肥',
                     text='我注重幫助減肥的水果'
-                ),
-                MessageAction(
-                    label='消除疲勞',
-                    text='我注重幫助消除疲勞的水果的水果'
                 )
             ]
         )
