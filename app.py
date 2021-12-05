@@ -146,7 +146,49 @@ def handle_postback(event):
     elif postback_data.get('action')=='查詢蓮霧':
         messages=[]
         messages.append(TextSendMessage(text='蓮霧 每100克\n熱量:35千卡\n糖:6.7克\n維生素C:11.0毫克\n膳食纖維1.0毫克'))
-        line_bot_api.reply_message(event.reply_token, messages)                
+        line_bot_api.reply_message(event.reply_token, messages) 
+    elif postback_data.get('action')=='我注重當季水果':
+        recommand=sesonal_fruit()
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[recommand])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[recommand],
+                                                preview_image_url=fruit_box_picture[recommand]))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='我注重幫助美白的水果':
+        ran=random.choice(fruit_beauty)
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='我注重顧眼睛的水果':
+        ran=random.choice(fruit_eye)
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='我注重幫助消化的水果':
+        ran=random.choice(fruit_digest)
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='我注重幫助減肥的水果':
+        ran=random.choice(fruit_diet)
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
+        line_bot_api.reply_message(event.reply_token, messages)
+    elif postback_data.get('action')=='我注重幫助消除疲勞的水果的水果':
+        ran=random.choice(fruit_rest)
+        messages=[]
+        messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
+        messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
+                                                preview_image_url=fruit_box_picture[ran]))
+        line_bot_api.reply_message(event.reply_token, messages)              
 
 @handler.add(MessageEvent)
 def handle_something(event):
@@ -159,48 +201,6 @@ def handle_something(event):
         elif '水果熟度辨識' in recrive_text:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們還未將此功能導入，請改日再試'))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重當季水果' in recrive_text:
-            recommand=sesonal_fruit()
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[recommand])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[recommand],
-                                                preview_image_url=fruit_box_picture[recommand]))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重幫助美白的水果' in recrive_text:
-            ran=random.choice(fruit_beauty)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
-                                                preview_image_url=fruit_box_picture[ran]))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重顧眼睛的水果' in recrive_text:
-            ran=random.choice(fruit_eye)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
-                                                preview_image_url=fruit_box_picture[ran]))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重幫助消化的水果' in recrive_text:
-            ran=random.choice(fruit_digest)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
-                                                preview_image_url=fruit_box_picture[ran]))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重幫助減肥的水果' in recrive_text:
-            ran=random.choice(fruit_diet)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
-                                                preview_image_url=fruit_box_picture[ran]))
-            line_bot_api.reply_message(event.reply_token, messages)
-        elif '我注重幫助消除疲勞的水果的水果' in recrive_text:
-            ran=random.choice(fruit_rest)
-            messages=[]
-            messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
-            messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
-                                                preview_image_url=fruit_box_picture[ran]))
             line_bot_api.reply_message(event.reply_token, messages)    
         else:
             messages=[]

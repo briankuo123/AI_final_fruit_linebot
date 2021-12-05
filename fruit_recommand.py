@@ -84,8 +84,8 @@ def fruit_recommand(event):
                         ),
                         PostbackAction(
                             label='消除疲勞',
-                            display_text='我注重幫助消除疲勞的水果的水果',
-                            data='action=我注重幫助消除疲勞的水果的水果'
+                            display_text='我注重幫助消除疲勞的水果',
+                            data='action=我注重幫助消除疲勞的水果'
                         )
                     ]
                 )
