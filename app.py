@@ -5,6 +5,9 @@ from linebot.models import events
 from linebot_import_api import *
 from fruit_serch import *
 from fruit_recommand import*
+from keras.models import load_model
+from PIL import Image, ImageOps
+import numpy as np
 
 
 app = Flask(__name__)
@@ -206,7 +209,7 @@ def handle_something(event):
         else:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們無法了解你所輸入的內容，請再輸入一次'))
-            line_bot_api.reply_message(event.reply_token, messages)
+            line_bot_api.reply_message(event.reply_token, messages)        
     else:
         messages=[]
         messages.append(TextSendMessage(text='很抱歉我們只能接收文字訊息，請改輸入文字'))
