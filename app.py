@@ -5,9 +5,6 @@ from linebot.models import events
 from linebot_import_api import *
 from fruit_serch import *
 from fruit_recommand import*
-from keras.models import load_model
-from PIL import Image, ImageOps
-import numpy as np
 
 
 app = Flask(__name__)
