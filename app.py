@@ -204,7 +204,7 @@ def handle_something(event):
             fruit_recommand(event)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
-            messages.append(TextSendMessage(text='很抱歉我們還未將此功能導入，請改日再試'))
+            messages.append(TextSendMessage(text='在此聊天室傳香蕉的照片就可以開始辨識熟度了喔!'))
             line_bot_api.reply_message(event.reply_token, messages)    
         else:
             messages=[]
@@ -214,8 +214,12 @@ def handle_something(event):
         model = load_model('./keras_model.h5')
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         message_content = line_bot_api.get_message_content(event.message.id)
-        size = (224, 224)
-        image = ImageOps.fit(message_content, size, Image.ANTIALIAS)
+        with open('temp_image.png', 'wb') as fd:
+            for chunk in message_content.iter_content():
+                fd.write(chunk)
+        with open('temp_image.png', 'rb') as imageFile:
+            size = (224, 224)
+            image = ImageOps.fit(imageFile, size, Image.ANTIALIAS)
 
         image_array = np.asarray(image)
         normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
