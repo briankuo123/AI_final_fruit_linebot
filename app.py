@@ -204,14 +204,14 @@ def handle_something(event):
             fruit_recommand(event)
         elif '水果熟度辨識' in recrive_text:
             messages=[]
-            messages.append(TextSendMessage(text='很抱歉我們還未將此功能導入，請改日再試'))
+            messages.append(TextSendMessage(text='在這個聊天室貼上你的香蕉圖片就可以使用此功能了喔!'))
             line_bot_api.reply_message(event.reply_token, messages)    
         else:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們無法了解你所輸入的內容，請再輸入一次'))
             line_bot_api.reply_message(event.reply_token, messages)
     elif event.message.type=='image':
-        model = load_model('keras_model.h5')
+        model = load_model('./keras_model.h5')
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         message_content = line_bot_api.get_message_content(event.message.id)
         size = (224, 224)
