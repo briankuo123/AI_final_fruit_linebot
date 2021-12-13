@@ -209,7 +209,32 @@ def handle_something(event):
         else:
             messages=[]
             messages.append(TextSendMessage(text='很抱歉我們無法了解你所輸入的內容，請再輸入一次'))
-            line_bot_api.reply_message(event.reply_token, messages)        
+            line_bot_api.reply_message(event.reply_token, messages)  
+    elif event.message.type=='image':
+        model = load_model('./keras_model.h5')
+        data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+        message_content = line_bot_api.get_message_content(event.message.id)
+        size = (224, 224)
+        image = ImageOps.fit(message_content, size, Image.ANTIALIAS)
+
+        image_array = np.asarray(image)
+        normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
+        data[0] = normalized_image_array
+
+        prediction = model.predict(data)
+        messages=[]
+        if prediction.argmax()==0 :
+            messages.append(TextSendMessage(text='您的香蕉熟度正好'))
+            line_bot_api.reply_message(event.reply_token, messages) 
+        elif prediction.argmax()==1 :
+            messages.append(TextSendMessage(text='您的香蕉熟度過熟'))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif prediction.argmax()==2 :
+            messages.append(TextSendMessage(text='您的香蕉熟度不足'))
+            line_bot_api.reply_message(event.reply_token, messages)
+        elif prediction.argmax()==3 :
+            messages.append(TextSendMessage(text='我們無法偵測到畫面有香蕉'))
+            line_bot_api.reply_message(event.reply_token, messages)      
     else:
         messages=[]
         messages.append(TextSendMessage(text='很抱歉我們只能接收文字訊息，請改輸入文字'))
