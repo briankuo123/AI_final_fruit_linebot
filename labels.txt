@@ -1,0 +1,4 @@
+0 Ripe
+1 Overripe
+2 Unripe
+3 Others
