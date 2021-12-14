@@ -214,12 +214,12 @@ def handle_something(event):
         model = load_model('./keras_model.h5')
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         message_content = line_bot_api.get_message_content(event.message.id)
-        with open('temp_image.png', 'wb') as fd:
+        with open('./static/{message_id}.jpg', 'wb') as fd:
             for chunk in message_content.iter_content():
                 fd.write(chunk)
-        with open('temp_image.png', 'rb') as imageFile:
-            size = (224, 224)
-            image = ImageOps.fit(imageFile, size, Image.ANTIALIAS)
+        image = Image.open('./static/{message_id}.jpg')
+        size = (224, 224)
+        image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
         image_array = np.asarray(image)
         normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
