@@ -9,7 +9,6 @@ from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -247,3 +246,4 @@ def handle_something(event):
 # run app
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=5566, debug=True)
+
