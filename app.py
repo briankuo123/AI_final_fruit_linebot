@@ -210,13 +210,13 @@ def handle_something(event):
             messages.append(TextSendMessage(text='很抱歉我們無法了解你所輸入的內容，請再輸入一次'))
             line_bot_api.reply_message(event.reply_token, messages)  
     elif event.message.type=='image':
-        model = load_model('.\keras_model.h5')
+        model = load_model(r'https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/keras_model.h5')
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         message_content = line_bot_api.get_message_content(event.message.id)
-        with open('.\static\temp.jpg', 'wb') as fd:
+        with open('./temp.jpg', 'wb') as fd:
             for chunk in message_content.iter_content():
                 fd.write(chunk)
-        image = Image.open('.\static\temp.jpg')
+        image = Image.open('./temp.jpg')
         size = (224, 224)
         image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
