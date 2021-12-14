@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'AIfruitnew'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C528F2F92D4B4CE4B9477C205D0A8703 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8DF1AE9AD2184ADD9736C2ECDA68A89D }}
