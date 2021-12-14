@@ -8,7 +8,7 @@ def fruit_serch(event):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit1.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit1.jpg?raw=true',
                     title='漿果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -30,7 +30,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit2.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit2.jpg?raw=true',
                     title='瓜果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -52,7 +52,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit3.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit3.jpg?raw=true',
                     title='柑橘類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -74,7 +74,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit4.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit4.jpg?raw=true',
                     title='梨果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -96,7 +96,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit5.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit5.jpg?raw=true',
                     title='核果類',
                     text='請選擇想查詢的水果',
                     actions=[
@@ -118,7 +118,7 @@ def fruit_serch(event):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://github.com/briankuo123/AI_final_fruit_linebot/blob/main/fruit6.jpg?raw=true',
+                    thumbnail_image_url='https://github.com/briankuo123/fruit_pic/blob/main/fruit6.jpg?raw=true',
                     title='熱帶水果',
                     text='請選擇想查詢的水果',
                     actions=[
