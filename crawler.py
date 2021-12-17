@@ -1,6 +1,8 @@
 import requests
 import numpy as np
 import json
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import MultipleLocator
 import datetime
@@ -32,24 +34,17 @@ def craw_fruit(fruit_id):
 
     year_price_avg = np.mean(fruit_avg_price)
         
-    plt.plot(fruit_date,fruit_avg_price,"r")
-    plt.title("whole year price")
-    plt.xlabel('date')
-    plt.ylabel('price')
-    x_locator=MultipleLocator(50)
-    y_locator=MultipleLocator(20)
-    ax=plt.gca()
-    ax.xaxis.set_major_locator(x_locator)
-    ax.yaxis.set_major_locator(y_locator)
-    plt.savefig('price_chart.png', bbox_inches='tight')
-    plt.close()
 
     return_value.append(last_price)
     return_value.append(last_date)
+    return_value.append(fruit_avg_price)
+    return_value.append(fruit_date)
 
     if last_price >= year_price_avg:
-        return_value.append("最後價格高於平均價格，推薦販售，不推薦買入")
+        return_value.append("價格高於平均價格，推薦販售，不推薦買入")
     else: 
-        return_value.append("最後價格低於平均價格，不推薦販售，推薦買入")
+        return_value.append("價格低於平均價格，不推薦販售，推薦買入")
 
     return return_value
+
+print(craw_fruit(0)[0])
