@@ -539,7 +539,7 @@ def handle_postback(event):
         messages.append(ImageSendMessage(original_content_url=fruit_box_picture[ran],
                                                 preview_image_url=fruit_box_picture[ran]))
         line_bot_api.reply_message(event.reply_token, messages)
-    elif postback_data.get('action')=='我注重幫助消除疲勞的水果的水果':
+    elif postback_data.get('action')=='我注重幫助消除疲勞的水果':
         ran=random.choice(fruit_rest)
         messages=[]
         messages.append(TextSendMessage(text='為你推薦{}'.format(fruit_box[ran])))
