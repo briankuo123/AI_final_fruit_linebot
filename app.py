@@ -26,6 +26,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/descript')
+def descript():
+    return render_template('descript.html')
+
 @app.route('/function')
 def function():
     return render_template('function.html')
