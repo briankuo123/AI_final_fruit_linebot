@@ -280,7 +280,7 @@ def handle_postback(event):
             plt.savefig('price_chart.png', bbox_inches='tight')
             plt.close()
             messages.append(TextSendMessage(text='最近價格為'+ str(result[1])+' ' +str(result[0])+'元\n'+str(result[4])))
-            mlink = upload_chart()
+            link = upload_chart()
             messages.append(ImageSendMessage(original_content_url=link,
                                                 preview_image_url=link))    
         else: 
