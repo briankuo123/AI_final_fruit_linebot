@@ -17,10 +17,16 @@ def craw_fruit(fruit_id):
     return_value = []
     last_price = 0
 
+    
     if(today.month < 10): 
-        month = '0'+str(today.month) 
+        month = '0'+str(today.month)
+    else:
+        month = str(today.month)
+    
     if(today.day <10):
         day = '0'+str(today.day)
+    else:
+        day = str(today.day)
     
 
     try:
