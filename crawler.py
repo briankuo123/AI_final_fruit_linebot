@@ -15,13 +15,22 @@ def craw_fruit(fruit_id):
     fruit_avg_price = []
     fruit_date = []
     return_value = []
+    last_price = 0
+
+    if(today.month < 10): 
+        month = '0'+str(today.month) 
+    if(today.day <10):
+        day = '0'+str(today.day)
+    
 
     try:
-        url = "https://www.twfood.cc/api/FarmTradeSums?filter={%22order%22:%22day%20asc%22,%22where%22:{%22itemCode%22:%22"+fruit_id_box[fruit_id]+"%22,%22day%22:{%22gte%22:%22"+str(today_year)+"/"+str(today.month)+"/"+str(today.day)+"%22}}}"
+        url = "https://www.twfood.cc/api/FarmTradeSums?filter={%22order%22:%22day%20asc%22,%22where%22:{%22itemCode%22:%22"+fruit_id_box[fruit_id]+"%22,%22day%22:{%22gte%22:%22"+str(today_year)+"/"+month+"/"+day+"%22}}}"
         r=requests.get(url, headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"})
     except:
         return_value.append(-1)
         return return_value
+
+    print(url)
       
     script=r.text
     data=json.loads(script)
@@ -46,5 +55,3 @@ def craw_fruit(fruit_id):
         return_value.append("價格低於平均價格，不推薦販售，推薦買入")
 
     return return_value
-
-print(craw_fruit(0)[0])
