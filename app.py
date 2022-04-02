@@ -90,7 +90,7 @@ def maintain():
             ax.yaxis.set_major_locator(y_locator)
             plt.savefig('./static/price_chart_'+str(i)+'.png', bbox_inches='tight')
             plt.close()
-
+    return 'ok'
 
 @app.route("/callback", methods=['POST'])
 def callback():
