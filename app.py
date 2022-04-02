@@ -14,24 +14,24 @@ import pyimgur
 client_id = '93f159998fb38d7'
 client_secret = '933c603016c7848acc80955c7bab15d34a2ab26a'
 result=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
-link=["https://aifruitnew.azurewebsites.net/static/price_chart_0.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_1.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_2.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_3.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_4.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_5.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_6.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_7.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_8.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_9.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_10.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_11.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_12.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_13.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_14.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_15.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_16.png",
-        "https://aifruitnew.azurewebsites.net/static/price_chart_17.png",]
+link=["https://linefruitguy.ncuedu.tw/static/price_chart_0.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_1.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_2.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_3.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_4.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_5.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_6.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_7.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_8.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_9.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_10.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_11.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_12.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_13.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_14.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_15.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_16.png",
+        "https://linefruitguy.ncuedu.tw/static/price_chart_17.png",]
 
 def upload_chart():
     PATH = "price_chart.png"
